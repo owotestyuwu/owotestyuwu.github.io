@@ -7,7 +7,7 @@
 <script>
 function runPythonScript() {
   $.ajax({
-    url: "/run-gui",
+    url: "/run.py",
     type: "POST",
     success: function(response) {
       console.log('Script executed successfully', response);
