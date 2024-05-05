@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run GUI</title>
+</head>
+<body>
+    <h1>Run GUI</h1>
+    <button onclick="runPythonScript()">Run GUI</button>
+
+    <script>
+        // JavaScript function to execute the Python code
+        function runPythonScript() {
+            // Make an AJAX request to execute the Python script
+            // Replace 'your-server-endpoint' with the actual endpoint where your Python code is hosted
+            // This assumes you have a server-side environment where you can execute Python code
+            // and return the result
+            
+            // Example using XMLHttpRequest
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "gpt4free\run.py", true);
+            xhr.send();
+            
+            // Optionally, you can handle the response from the server here
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    // Handle success
+                    console.log(xhr.responseText);
+                } else {
+                    // Handle error
+                    console.error('Error:', xhr.statusText);
+                }
+            };
+        }
+    </script>
+</body>
+</html>
